@@ -1,0 +1,61 @@
+@use "../../helpers/mixin/mixins"; //center, background, parralax(), underline
+@use "../../helpers/variables/variables"; //$color1, $color2, $color3, $color4, $color5, $light
+
+.the-header {
+	//header content
+	.header-content {
+		@include mixins.center;
+		height: 167px;
+
+		a {
+			text-decoration: none;
+			color: variables.$color1;
+			h1 {
+				@include mixins.font;
+			}
+		}
+
+		video {
+			width: 125px;
+			aspect-ratio: 1/1;
+			border: none;
+			position: absolute;
+			left: 0;
+			top: 104px;
+		}
+		@media (min-width: 768px) {
+			video {
+				left: 50%;
+				transform: translatex(-50%);
+			}
+		}
+	}
+
+	//TOP BAR BJÆLKE
+	.black-banner {
+		width: 100%;
+		margin-top: -0.5px;
+		height: 65px;
+		background-color: variables.$color1;
+		ul {
+			position: relative;
+			display: flex;
+			justify-content: space-between;
+			top: 50%;
+			transform: translatey(-50%);
+			padding: 0 30px;
+			li {
+				@include mixins.undline;
+				list-style: none;
+				a {
+					@include mixins.lille-font;
+				}
+			}
+		}
+		@media (max-width: 768px) {
+			ul {
+				display: none;
+			}
+		}
+	}
+}

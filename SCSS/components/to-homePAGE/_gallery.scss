@@ -1,0 +1,62 @@
+@use "../../helpers/mixin/mixins"; //center, background, parralax(), underline
+@use "../../helpers/variables/variables"; //$color1, $color2, $color3, $color4, $color5, $light
+
+main {
+	.gallery {
+		h2 {
+			@include mixins.font;
+			@include mixins.center;
+		}
+		.slider {
+			width: 1300px;
+			max-width: 100vw;
+			height: 350px;
+			margin: 30px auto;
+			position: relative;
+			overflow: hidden;
+			.list {
+				position: absolute;
+				width: max-content;
+				height: 100%;
+				left: 0;
+				top: 0;
+				display: flex;
+				transition: 1s;
+				img {
+					width: 1300px;
+					max-width: 100vw;
+					height: 100%;
+					object-fit: cover;
+				}
+			}
+			.dots {
+				position: absolute;
+				bottom: 10px;
+				left: 0;
+				color: variables.$light;
+				width: 100%;
+				margin: 0;
+				padding: 0;
+				display: flex;
+				justify-content: center;
+				li {
+					list-style: none;
+					width: 10px;
+					height: 10px;
+					background-color: variables.$light;
+					margin: 10px;
+					border-radius: 20px;
+					transition: 0.5s;
+				}
+				li.active {
+					width: 30px;
+				}
+			}
+		}
+		@media (min-width: 768px) {
+			.slider {
+				height: 400px;
+			}
+		}
+	}
+}

@@ -1,0 +1,56 @@
+@use "../../helpers/mixin/mixins"; //center, background, parralax(), underline
+@use "../../helpers/variables/variables"; //$color1, $color2, $color3, $color4, $color5, $light
+
+.newsletter-wrapper {
+	@include mixins.center;
+	height: 300px;
+	width: 100%;
+	margin: 20px;
+	.inner-newsletter-container {
+		width: 60%;
+		margin: auto;
+		flex-direction: row;
+		border-radius: 12px;
+		background-color: variables.$color3;
+		h3 {
+			font-family: "Roboto", sans-serif;
+			color: variables.$color1;
+			font-weight: 300;
+			color: variables.$light;
+			font-size: 2rem;
+			letter-spacing: 5px;
+			padding: 50px 0 20px;
+		}
+		input[type="text"],
+		[type="email"] {
+			border-style: none none solid none;
+			border-color: variables.$light;
+			width: 80%;
+			padding: 12px 20px;
+			margin: 8px 0;
+			background-color: variables.$color3;
+			color: variables.$light;
+			&:focus {
+				outline: none;
+			}
+			&::placeholder {
+				color: variables.$light;
+			}
+		}
+		input[type="button"] {
+			background-color: variables.$light;
+			padding: 10px 20px;
+			border: none;
+			width: 80%;
+			margin: 20px;
+			border-radius: 50px;
+			text-transform: uppercase;
+		}
+	}
+
+	@media (min-width: 768px) {
+		div {
+			width: 50%;
+		}
+	}
+}

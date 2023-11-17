@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="./SCSS/main.css" />
+		<script src="./javaScript/burgermenu.js" defer></script>
+		<script src="./javaScript/slider.js" defer></script>
+		<script src="./javaScript/newsletter.js" defer></script>
+		<script src="./javaScript/topTop.js" defer></script>
+		<script
+			src="https://kit.fontawesome.com/11e7a87280.js"
+			crossorigin="anonymous"></script>
+	</head>
+
+	<body>
+		<header class="the-header">
+			<section class="header-content">
+				<a href="index.html"><h1>the greatful band</h1></a>
+				<video
+					src="assets/images/logos/The Grateful Band.mp4"
+					autoplay
+					loop></video>
+			</section>
+			<div class="black-banner">
+				<ul>
+					<li><a class="link" href="tour.html">tour</a></li>
+					<li><a class="link" href="the-band.html">the band</a></li>
+					<li><a class="link" href="albums.html">albums</a></li>
+					<li><a class="link" href="pictures.html">pictures</a></li>
+				</ul>
+			</div>
+		</header>
+		<!-- Burger linjer menu vises på mobil-->
+		<span class="menu-bar" id="openMenu">
+			<span id="bg-wrapper">
+				<i class="bg" id="line1"></i>
+				<i class="bg" id="line2"></i>
+				<i class="bg" id="line3"></i>
+			</span>
+		</span>
+
+		<!-- burgermenu vises ikke -->
+		<nav id="menu" class="hide menu">
+			<span id="innerMenu" class="innerMenu">
+				<ul class="menu-mobil">
+					<li><a class="link" href="tour.html">tour</a></li>
+					<li><a class="link" href="the-band.html">the band</a></li>
+					<li><a class="link" href="albums.html">albums</a></li>
+					<li><a class="link" href="pictures.html">pictures</a></li>
+				</ul>
+			</span>
+		</nav>
+		<main>
+		
+		<footer>
+			<section class="to-top" id="goToTop">
+				<p>To top </p>
+				<i class="fa-solid fa-circle-chevron-up"></i>
+			</section>
+			<section class="copyright">
+				<a href="mailto:contact@tgb.com">Contact</a>
+				<p
+					>copyright
+					<i class="fa-regular fa-copyright"></i>
+					2023 | The gratful band</p
+				>
+			</section>
+		</footer>
+	</body>
+</html>

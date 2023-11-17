@@ -1,0 +1,32 @@
+@use "../../helpers/mixin/mixins"; //center, background, parralax(), underline
+@use "../../helpers/variables/variables"; //$color1, $color2, $color3, $color4, $color5, $light
+
+// parralax efffect
+main {
+	.parallax {
+		@include mixins.parralax("pexels-brett-sayles-1309240.jpg");
+	}
+	.parallax2 {
+		@include mixins.parralax("pexels-oleg-magni-1813124.jpg");
+	}
+	.parallax3 {
+		@include mixins.parralax("pexels-jc-siller-8634867.jpg");
+	}
+	.parallax4 {
+		@include mixins.parralax("pexels-josh-sorenson-995301.jpg");
+	}
+	// Gallery slider
+
+	.navigation-section {
+		@include mixins.center;
+		@include mixins.background;
+		a {
+			text-decoration: none;
+			color: variables.$light;
+
+			h3 {
+				@include mixins.font;
+			}
+		}
+	}
+}

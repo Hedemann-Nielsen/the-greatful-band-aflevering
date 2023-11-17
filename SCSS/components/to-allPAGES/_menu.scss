@@ -1,0 +1,86 @@
+@use "../../helpers/mixin/mixins"; //center, background, parralax(), underline
+@use "../../helpers/variables/variables"; //$color1, $color2, $color3, $color4, $color5, $light
+
+//  menu bar circle
+.menu-bar {
+	position: fixed;
+	bottom: 8px;
+	left: 50%;
+	transform: translatex(-50%);
+	width: 80px;
+	height: 80px;
+	border-radius: 50px;
+	background-color: variables.$color1;
+	z-index: 1000;
+
+	@media (min-width: 768px) {
+		display: none;
+	}
+	#bg-wrapper {
+		padding: 5px;
+		cursor: pointer;
+		/* lines in burgermenu */
+		.bg {
+			display: block;
+			width: 50px;
+			height: 5px;
+			background: variables.$light;
+			margin: 8px auto;
+			border-radius: 50px;
+			transition: all 0.7s ease;
+		}
+		#line1.bg1-active {
+			transform: translateY(15px) rotateZ(45deg);
+		}
+		#line2.bg2-active {
+			opacity: 0;
+		}
+		#line3.bg3-active {
+			transform: translateY(-15px) rotateZ(-45deg);
+		}
+	}
+}
+
+// menu when clicked in mobil view
+.menu {
+	position: fixed;
+	top: 230px;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: variables.$color1;
+	animation: goRight 1s;
+	animation-timing-function: ease-in-out;
+	z-index: 999;
+	.innerMenu {
+		width: 100%;
+		height: 100vh;
+		margin: 2rem auto;
+		ul {
+			display: block;
+			li {
+				@include mixins.undline;
+				list-style: none;
+				padding: 0.8rem;
+				text-align: center;
+			}
+		}
+	}
+}
+@keyframes goRight {
+	from {
+		left: 100%;
+	}
+
+	to {
+		left: 0px;
+	}
+}
+
+// classes to hide and show menu on mobile
+.hide {
+	display: none;
+}
+.show {
+	display: block;
+}

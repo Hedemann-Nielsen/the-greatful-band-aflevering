@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="./SCSS/main.css" />
+		<script src="./javaScript/burgermenu.js" defer></script>
+		<script src="./javaScript/slider.js" defer></script>
+		<script src="./javaScript/newsletter.js" defer></script>
+		<script src="./javaScript/topTop.js" defer></script>
+		<script
+			src="https://kit.fontawesome.com/11e7a87280.js"
+			crossorigin="anonymous"></script>
+	</head>
+
+	<body>
+		<header class="the-header">
+			<section class="header-content">
+				<a href="index.html"><h1>the greatful band</h1></a>
+				<video
+					src="assets/images/logos/The Grateful Band.mp4"
+					autoplay
+					loop></video>
+			</section>
+			<div class="black-banner">
+				<ul>
+					<li><a class="link" href="tour.html">tour</a></li>
+					<li><a class="link" href="the-band.html">the band</a></li>
+					<li><a class="link" href="albums.html">albums</a></li>
+					<li><a class="link" href="pictures.html">pictures</a></li>
+				</ul>
+			</div>
+		</header>
+		<!-- Burger linjer menu vises på mobil-->
+		<span class="menu-bar" id="openMenu">
+			<span id="bg-wrapper">
+				<i class="bg" id="line1"></i>
+				<i class="bg" id="line2"></i>
+				<i class="bg" id="line3"></i>
+			</span>
+		</span>
+
+		<!-- burgermenu vises ikke -->
+		<nav id="menu" class="hide menu">
+			<span id="innerMenu" class="innerMenu">
+				<ul class="menu-mobil">
+					<li><a class="link" href="tour.html">tour</a></li>
+					<li><a class="link" href="the-band.html">the band</a></li>
+					<li><a class="link" href="albums.html">albums</a></li>
+					<li><a class="link" href="pictures.html">pictures</a></li>
+				</ul>
+			</span>
+		</nav>
+		<main>
+			<!-- gallery slider -->
+			<section class="gallery">
+				<h2>gallery</h2>
+				<div class="slider">
+					<div class="list">
+						<div class="item">
+							<img
+								src="./assets/images/images/pexels-vishnu-r-nair-1105666.jpg"
+								alt="" />
+						</div>
+						<div class="item">
+							<img
+								src="./assets/images/images/pexels-brett-sayles-1309240.jpg"
+								alt="" />
+						</div>
+						<div class="item">
+							<img
+								src="./assets/images/images/pexels-jc-siller-8634867.jpg"
+								alt="" />
+						</div>
+					</div>
+					<ul class="dots">
+						<li class="active"></li>
+						<li></li>
+						<li></li>
+					</ul>
+				</div>
+			</section>
+			<div class="parallax2"></div>
+			<section class="navigation-section">
+				<a href="#tour">
+					<h3>tour</h3>
+					<p>click to see</p>
+				</a>
+			</section>
+			<div class="parallax3"></div>
+			<section class="navigation-section">
+				<a href="#band">
+					<h3>the band</h3>
+					<p>click to see</p>
+				</a>
+			</section>
+			<div class="parallax4"></div>
+			<section id="form" class="newsletter-wrapper">
+				<div class="inner-newsletter-container">
+					<h3>Newsletter</h3>
+					<input type="text" name="name" id="name" placeholder="Name" />
+					<input type="email" name="email" id="email" placeholder="Email" />
+					<input type="button" value="sign up" id="submit" />
+				</div>
+			</section>
+			<div class="parallax"></div>
+			<section class="navigation-section">
+				<a href="#albums">
+					<h3>albums</h3>
+					<p>click to see</p>
+				</a>
+			</section>
+			<div class="parallax2"></div>
+			<section class="navigation-section">
+				<a href="#pictures">
+					<h3>pictures</h3>
+					<p>click to see</p>
+				</a>
+			</section>
+			<div class="parallax3"></div>
+		</main>
+		<footer>
+			<section class="to-top" id="goToTop">
+				<p>To top </p>
+				<i class="fa-solid fa-circle-chevron-up"></i>
+			</section>
+			<section class="copyright">
+				<a href="mailto:contact@tgb.com">Contact</a>
+				<p
+					>copyright
+					<i class="fa-regular fa-copyright"></i>
+					2023 | The gratful band</p
+				>
+			</section>
+		</footer>
+	</body>
+</html>
