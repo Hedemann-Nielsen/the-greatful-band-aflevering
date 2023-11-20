@@ -1,0 +1,38 @@
+@use "../../helpers/mixin/mixins"; //center, background, parralax(), underline
+@use "../../helpers/variables/variables"; //$color1, $color2, $color3, $color4, $color5, $light
+
+main {
+	.the-band {
+		// display: flex;
+		@include mixins.center;
+		background-color: variables.$color1;
+		color: variables.$light;
+		figure {
+			img {
+				width: 100%;
+				aspect-ratio: 1/1;
+				object-fit: cover;
+			}
+		}
+		figcaption {
+			h3 {
+				@include mixins.font;
+			}
+			h5 {
+				@include mixins.lille-font;
+				letter-spacing: 3px;
+			}
+			p {
+				padding: 5px 70px 20px;
+			}
+		}
+	}
+}
+@media (min-width: 768px) {
+	.the-band {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 20px;
+		margin: auto;
+	}
+}

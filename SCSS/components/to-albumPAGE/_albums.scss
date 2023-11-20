@@ -1,0 +1,15 @@
+@use "../../helpers/mixin/mixins"; //center, background, parralax(), underline
+@use "../../helpers/variables/variables"; //$color1, $color2, $color3, $color4, $color5, $light
+
+main {
+	.albums {
+		@include mixins.center;
+		h3 {
+			@include mixins.font;
+		}
+		p {
+			@include mixins.lille-font;
+			color: variables.$color1;
+		}
+	}
+}

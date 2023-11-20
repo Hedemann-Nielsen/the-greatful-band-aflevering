@@ -428,6 +428,65 @@ main .tour-list div:nth-child(2) {
   width: 300px;
 }
 
+main .the-band {
+  justify-content: center;
+  text-align: center;
+  background-color: #0d0f0e;
+  color: #fcfcfc;
+}
+main .the-band figure img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .the-band figcaption h3 {
+  width: 100%;
+  padding-top: 30px;
+  font-size: 2rem;
+  font-family: "Rock Salt", cursive;
+  text-transform: capitalize;
+}
+main .the-band figcaption h5 {
+  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fcfcfc;
+  letter-spacing: 3px;
+}
+main .the-band figcaption p {
+  padding: 5px 70px 20px;
+}
+
+@media (min-width: 768px) {
+  .the-band {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin: auto;
+  }
+}
+main .albums {
+  justify-content: center;
+  text-align: center;
+}
+main .albums h3 {
+  width: 100%;
+  padding-top: 30px;
+  font-size: 2rem;
+  font-family: "Rock Salt", cursive;
+  text-transform: capitalize;
+}
+main .albums p {
+  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fcfcfc;
+  color: #0d0f0e;
+}
+
 * {
   margin: 0;
   padding: 0;

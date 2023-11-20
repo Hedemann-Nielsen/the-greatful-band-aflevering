@@ -35,30 +35,10 @@ function validateName(name) {
 	if (name.length < 2) {
 		//hvis navnet ikke har 2 tegn, farves borderen rød og bliver større
 		myName.style.border = "3px solid #ff2222";
-		showErrorName(form.name);
 
 		return false;
 	} else {
 		return true;
-	}
-}
-//Indsæt tekstfelt under inputfelt som ikke er udfyldt korrekt
-function showErrorName(elm) {
-	//meddelse
-	const error_messageName = "Your name should contain more than two characters";
-	//indset element efter input
-	if (!elm.nextElementSibling) {
-		elm.classList.add(`field_error`);
-		elm.insertAdjacentHTML(
-			`afterend`,
-			`<span class="text_error">${error_messageName}</span>`
-		);
-		//fjern meddelse når der indtastning i felt begybder
-		elm.addEventListener(`keypress`, function () {
-			if (elm.nextElementSibling) {
-				elm.nextElementSibling.remove();
-			}
-		});
 	}
 }
 
@@ -72,30 +52,7 @@ function validateEmail(email) {
 	} else {
 		//ellers bfarves borderen rød
 		myEmail.style.borderBottom = "3px solid #ff2222";
-		showErrorEmail(form.email);
 		return false;
-	}
-}
-//Indsæt tekstfelt under inputfelt som ikke er udfyldt korrekt
-function showErrorEmail(elm) {
-	//meddelse
-	const error_messageEmail =
-		"Please enter a valid email. Your email must contain @ and .";
-
-	//indset element efter input
-	if (!elm.nextElementSibling) {
-		elm.classList.add(`field_error`);
-		elm.insertAdjacentHTML(
-			`afterend`,
-			`<span class="text_error">${error_messageEmail}</span>`
-		);
-
-		//fjern meddelse når der indtastning i felt begybder
-		elm.addEventListener(`keypress`, function () {
-			if (elm.nextElementSibling) {
-				elm.nextElementSibling.remove();
-			}
-		});
 	}
 }
 
